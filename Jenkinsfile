@@ -4,8 +4,8 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
-    HEROKU_API_KEY = credentials('heroku-api-key')
-    IMAGE_NAME = 'darinpope/jenkins-example-react'
+    HEROKU_API_KEY = credentials('heroku')
+    IMAGE_NAME = 'jks/jenkins-example-react'
     IMAGE_TAG = 'latest'
     APP_NAME = 'jenkins-example-react'
   }
